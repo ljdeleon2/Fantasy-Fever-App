@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e; /* Set background color to a lighter dark gray */
+    color: #f0f0f0; /* Adjust text color for better contrast */
+}
+
+/* Navigation Bar */
+.nav-bar-container {
+    margin-top: 20px; /* Push the navigation below the top of the page */
+}
+
+.nav-bar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Flex Layout for Main Content */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-container {
+    flex: 3;
+    background-color: #3c3c3c; /* Adjust background to a slightly lighter gray */
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    color: #ffffff; /* Ensure text is readable */
+}
+
+.ad-section {
+    flex: 1;
+    text-align: center;
+}
+
+/* Player Profile Styling */
+.player-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #575757;
+}
+
+.player-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px; /* Make it square */
+    object-fit: cover;
+}
+
+.player-info h1 {
+    font-size: 24px;
+    color: #008080; /* Teal color */
+}
+
+.player-info p {
+    margin-bottom: 4px;
+}
+
+.points-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.points-graph {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+.stats-section {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #575757;
+}
+
+th {
+    background-color: #008080; /* Teal color */
+    color: white;
+}
+
+td {
+    white-space: nowrap;
+    color: #f0f0f0; /* Adjusted to a light gray for readability */
+}
+
+.ad-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Adjust Opponent Column Width */
+th:nth-child(3), td:nth-child(3) {
+    width: 150px;
+}
+
+/* Highlight W/L Colors */
+td.win {
+    color: #28a745;
+    font-weight: bold;
+}
+
+td.loss {
+    color: #dc3545;
+    font-weight: bold;
+}

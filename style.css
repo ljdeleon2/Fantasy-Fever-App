@@ -1,0 +1,210 @@
+/* General Styles - Dark Theme */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #dcdcdc; /* Light text for contrast */
+}
+
+/* Header Section with Background Image */
+header {
+    background-image: url('NFL_Background.jpg'); /* Background image for the header */
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 20px 0;
+    color: #fff; /* Ensure text remains visible */
+}
+
+.header-top {
+    text-align: center;
+    padding-bottom: 130px;
+}
+
+.club-logos img {
+    width: 50px;
+    margin: 0 5px;
+}
+
+/* Dark Background Behind Tabs */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    padding: 10px 0; /* Add padding to make the background banner more visible */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Light text for better visibility on dark background */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #00bfff; /* Light blue hover effect */
+}
+
+/* Logo Styles */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-container img {
+    width: 200px; /* Adjust this value as needed */
+    height: auto;
+}
+
+/* Main Banner Section */
+.banner {
+    background: linear-gradient(90deg, #272421 50%, #3a3a3a 50%); /* Dark gradient background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    height: auto; /* Ensure the section height adjusts as needed */
+}
+
+.banner-content {
+    max-width: 40%;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #dcdcdc; /* Light gray */
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: #bfbfbf; /* Slightly lighter text */
+}
+
+/* Add image under the heading */
+.banner-content img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Add some space between the heading and the image */
+}
+
+/* Adjust the Players Section to center image vertically */
+.players {
+    padding: 55 0px;
+    background-color: #3a3a3a;
+    height: 100%; 
+    width: 40%; 
+}
+
+/* Make Image Fill the Space and Adjust Its Position */
+.players img {
+    width: 100%; /* Fill the width */
+    height: auto;
+    object-fit: cover; 
+    margin-top: 30px; /* Add some margin to adjust its vertical position */
+    margin-left: -60px;
+}
+
+/* Image centering styles */
+.center-image {
+    display: block;
+    margin: 20px auto; /* Center the image horizontally and add space above */
+    max-width: 80%; /* Adjust the width to make sure it scales well */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.news-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000; /* Adjust this color to fit your theme */
+}
+
+.news-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/*
+
+.news-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+*/
+
+.news-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 20px; /* Space between items */
+}
+
+.news-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.33% - 20px); /* Flex-grow, flex-shrink, flex-basis for three items per row */
+    max-width: 300px; /* Set max width for each item */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item h3 {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.news-item .date {
+    display: block;
+    margin: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.ads-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.ads-section h2 {
+    font-size: 24px;
+}
+
+.ads-container {
+    display: flex; /* Optional: to align ads in a row */
+    justify-content: center; /* Center ads */
+}
+
+.ads-container a {
+    margin: 10px; /* Space between ads */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #2f2f2f;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 1px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

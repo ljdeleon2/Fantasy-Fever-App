@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Gen Stats</title>
+    <link rel="stylesheet" href="nextgenStyles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-bar-container">
+        <div class="nav-bar">
+            <ul>
+                <li><a href="FFDraft.html">Home</a></li>
+                <li><a href="roster.html">Roster</a></li>
+                <li><a href="matchup.html">Matchup</a></li>
+                <li><a href="league.html">League</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="nextgen.html" class="active">Next Gen</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header Logo -->
+    <div class="header-logo-container">
+        <img src="nextgenstats.png" alt="Next Gen Stats Logo" class="header-logo">
+    </div>
+
+    <div class="nextgen-container">
+        <!-- Section Header -->
+        <div class="tab-container">
+            <span class="tab active" onclick="showTab('highlights')">Live Highlights</span>
+            <span class="tab" onclick="showTab('charts')">Game Charts</span>
+        </div>
+
+        <!-- Player Highlights -->
+        <div id="highlights" class="content-section">
+            <!-- Highlight 1 -->
+            <div class="highlight">
+    <img src="CWill.jpg" alt="Caleb Williams" class="player-photo">
+    <div class="info">
+        <h3>Caleb Williams</h3>
+        <p>30-yard passing touchdown</p>
+        <p>5.2 Points</p>
+    </div>
+    <div class="play-chart-container">
+        <video controls class="play-chart">
+            <source src="WK 5 Caleb TD.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+
+            <!-- Highlight 2 -->
+            <div class="highlight">
+                <img src="sb.png" alt="Saquon Barkley" class="player-photo">
+                <div class="info">
+                    <h3>Saquon Barkley</h3>
+                    <p>19-yard rushing touchdown</p>
+                    <p>7.9 Points</p>
+                </div>
+                <div class="play-chart-container">
+                    <img src="nextgenvid1.png" alt="Play Chart" class="play-chart" onclick="openFullscreen(this)">
+                </div>
+            </div>
+
+            <!-- Highlight 3 -->
+            <div class="highlight">
+                <img src="kw.png" alt="Kyren Williams" class="player-photo">
+                <div class="info">
+                    <h3>Kyren Williams</h3>
+                    <p>5-yard receiving touchdown</p>
+                    <p>7.5 Points</p>
+                </div>
+                <div class="play-chart-container">
+                    <img src="nextgenvid2.png" alt="Play Chart" class="play-chart" onclick="openFullscreen(this)">
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Charts -->
+        <div id="charts" class="content-section hidden">
+            <div class="highlight">
+                <img src="CWill.jpg" alt="Caleb Williams" class="player-photo">
+                <div class="info">
+                    <h3>Caleb Williams</h3>
+                    <p>Passing Yards: 243</p>
+                    <p>Completion Rate: 67%</p>
+                </div>
+                <div class="play-chart-container">
+                    <img src="Caleb Chart.jpeg" alt="Game Chart" class="play-chart" onclick="openFullscreen(this)">
+                </div>
+            </div>
+
+            <div class="highlight">
+                <img src="sb.png" alt="Saquon Barkley" class="player-photo">
+                <div class="info">
+                    <h3>Saquon Barkley</h3>
+                    <p>Rushing Yards: 105</p>
+                    <p>Touchdowns: 2</p>
+                </div>
+                <div class="play-chart-container">
+                    <img src="Barkley Chart.jpeg" alt="Game Chart" class="play-chart" onclick="openFullscreen(this)">
+                </div>
+            </div>
+
+            <div class="highlight">
+                <img src="kw.png" alt="Kyren Williams" class="player-photo">
+                <div class="info">
+                    <h3>Kyren Williams</h3>
+                    <p>Receiving Yards: 56</p>
+                    <p>Touchdowns: 1</p>
+                </div>
+                <div class="play-chart-container">
+                    <img src="Williams Chart.jpeg" alt="Game Chart" class="play-chart" onclick="openFullscreen(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+
+        function openFullscreen(img) {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+
+            const modalImg = document.createElement('img');
+            modalImg.src = img.src;
+            modalImg.className = 'modal-content';
+
+            const closeButton = document.createElement('span');
+            closeButton.innerHTML = '&times;';
+            closeButton.className = 'modal-close';
+            closeButton.onclick = () => modal.remove();
+
+            modal.appendChild(modalImg);
+            modal.appendChild(closeButton);
+            document.body.appendChild(modal);
+
+            modal.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
